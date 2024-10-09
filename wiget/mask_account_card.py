@@ -21,6 +21,3 @@ def mask_account_card(account_card: str) -> str:
     del splited_str[-1]
 
     print(" ".join(splited_str), masked_number)
-
-
-mask_account_card(account_card)
