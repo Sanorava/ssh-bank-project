@@ -10,7 +10,13 @@ def mask_account_card(account_card: str) -> str:
 
     mask_need_string = splited_str[-1]
 
-    masked_number = mask_need_string.replace(mask_need_string[6:11], "******")
+    if splited_str[0] == "Счет" or "Счёт":
+
+        masked_number = mask_need_string.replace(mask_need_string[:-4], "**")
+
+    else:
+
+        masked_number = mask_need_string.replace(mask_need_string[6:11], "******")
 
     del splited_str[-1]
 
