@@ -1,6 +1,6 @@
-account_card = input()
-
 from datetime import datetime
+
+account_card = input()
 
 
 def mask_account_card(account_card: str) -> str:
