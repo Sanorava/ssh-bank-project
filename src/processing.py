@@ -13,7 +13,7 @@ def filter_by_state(data: dict, state='EXECUTED') -> dict:
     return filtered_data
 
 
-def sort_by_date(data, ascending=False):
+def sort_by_date(data: dict, ascending=False) -> dict:
     """
     Функция сортирует список словарей по ключу date.
 
@@ -24,3 +24,16 @@ def sort_by_date(data, ascending=False):
     # Делаем сортировку на основе ключа 'date'
     sorted_data = sorted(data, key=lambda x: datetime.strptime(x['date'], '%Y-%m-%d'), reverse=not ascending)
     return sorted_data
+
+
+# Сортировка по убыванию (по умолчанию)
+result_desc = sort_by_date(data)
+print("Сортировка по убыванию:")
+for item in result_desc:
+    print(item)
+
+# Сортировка по возрастанию
+result_asc = sort_by_date(data, ascending=True)
+print("\nСортировка по возрастанию:")
+for item in result_asc:
+    print(item)
