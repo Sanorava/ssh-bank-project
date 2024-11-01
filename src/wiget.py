@@ -1,7 +1,5 @@
 from datetime import datetime
 
-account_card = input()
-
 
 def mask_account_card(account_card: str) -> str:
     """
@@ -31,9 +29,6 @@ def mask_account_card(account_card: str) -> str:
         del splited_str[-1]
 
         return " ".join(splited_str) + " " + final_number
-
-
-print(mask_account_card(account_card))
 
 
 def get_date(date_string: str) -> str:

@@ -1,6 +1,3 @@
-card_number = input()
-
-
 def get_mask_card_number(card_number: str) -> str:
     """
     Функция, которая делит строку на 4 части и маскирует блок цифр
@@ -15,10 +12,7 @@ def get_mask_card_number(card_number: str) -> str:
     return splited_number
 
 
-get_mask_card_number(card_number)
-
-
-account_number = input()
+get_mask_card_number
 
 
 def get_mask_account(account_number: str) -> str:
@@ -31,4 +25,4 @@ def get_mask_account(account_number: str) -> str:
     return masked_account_number
 
 
-get_mask_account(account_number)
+get_mask_account
