@@ -1,6 +1,6 @@
-account_card = input()
-
 from datetime import datetime
+
+account_card = input()
 
 
 def mask_account_card(account_card: str) -> str:
@@ -24,9 +24,9 @@ def mask_account_card(account_card: str) -> str:
 
         masked_number = mask_need_string.replace(mask_need_string[6:11], "******")
 
-        parts = [masked_number[i:i + 4] for i in range(0, 16, 4)]
+        parts = [masked_number[i : i + 4] for i in range(0, 16, 4)]
 
-        final_number = ' '.join(parts)
+        final_number = " ".join(parts)
 
         del splited_str[-1]
 
