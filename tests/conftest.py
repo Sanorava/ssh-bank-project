@@ -3,7 +3,7 @@ import pytest
 
 @pytest.fixture()
 def number():
-    return '2202 34** **** 5655'
+    return '4132 13** **** 3482'
 
 
 @pytest.fixture()
@@ -18,7 +18,7 @@ def account_number():
 
 @pytest.fixture()
 def account_card():
-    return 'Visa Platinum 7000 79** **** 0636'
+    return 'Visa Platinum 7000 79** **** 6361'
 
 
 @pytest.fixture()

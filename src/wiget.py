@@ -20,7 +20,7 @@ def mask_account_card(account_card: str) -> str:
 
     else:
 
-        masked_number = mask_need_string.replace(mask_need_string[6:11], "******")
+        masked_number = mask_need_string.replace(mask_need_string[6:12], "******")
 
         parts = [masked_number[i : i + 4] for i in range(0, 16, 4)]
 
