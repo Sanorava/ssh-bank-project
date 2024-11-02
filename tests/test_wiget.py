@@ -16,3 +16,4 @@ def test_mask_account_card_number(account_card):
 
 def test_get_date(get_data):
     assert get_date("2024-03-11T02:26:18.671407") == get_data
+    assert get_date("2024-11-12T11:45:10.671407") == '12:11:2024'
