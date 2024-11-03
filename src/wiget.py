@@ -1,7 +1,5 @@
 from datetime import datetime
 
-account_card = input()
-
 
 def mask_account_card(account_card: str) -> str:
     """
@@ -22,7 +20,7 @@ def mask_account_card(account_card: str) -> str:
 
     else:
 
-        masked_number = mask_need_string.replace(mask_need_string[6:11], "******")
+        masked_number = mask_need_string.replace(mask_need_string[6:12], "******")
 
         parts = [masked_number[i : i + 4] for i in range(0, 16, 4)]
 
@@ -31,9 +29,6 @@ def mask_account_card(account_card: str) -> str:
         del splited_str[-1]
 
         return " ".join(splited_str) + " " + final_number
-
-
-print(mask_account_card(account_card))
 
 
 def get_date(date_string: str) -> str:
