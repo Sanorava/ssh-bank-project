@@ -94,3 +94,16 @@ transactions =  (
 
 
 transaction = filter_by_currency(transactions, 'USD')
+
+
+def card_number_generator(start: int, end: int) -> Generator:
+
+    while start != end + 1 and start <= end:
+        card = f'{str(start):0>16}'
+
+        yield f'{card[:4]} {card[4:8]} {card[8:12]} {card[12:]}'
+
+        start += 1
+
+
+random_card_number = card_number_generator(1,  9999999999999999)

@@ -23,6 +23,6 @@
   * Модуль **progressing** проверяет пофедение функции `filter_by_state` с помощью фикстуры
 ### Установка:
 1. Клонируйте репозиторий:
-   ### git clone https://github.com/Sanorava/ssh-bank-project.git
+   ### `git clone https://github.com/Sanorava/ssh-bank-project.git`
 2. Установите нужные зависимости.
 3. **Тестируйте, мистер наставник.**
