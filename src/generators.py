@@ -107,3 +107,16 @@ def card_number_generator(start: int, end: int) -> Generator:
 
 
 random_card_number = card_number_generator(1,  9999999999999999)
+
+
+def transaction_descriptions(transactions: list) -> Generator:
+    """
+    Функция-генератор типа операций
+    отбирает типы операций из списка словарей и возвращает только тип
+
+    """
+    for transaction in transactions:
+
+        yield transaction.get("description")
+
+account_operations = transaction_descriptions(transactions)
