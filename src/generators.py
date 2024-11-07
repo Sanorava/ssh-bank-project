@@ -1,4 +1,5 @@
 from typing import Generator
+from src.decorators import log
 
 
 def filter_by_currency(transactions: list , currency: str) -> Generator:
@@ -108,7 +109,7 @@ def card_number_generator(start: int, end: int) -> Generator:
 
 random_card_number = card_number_generator(1,  9999999999999999)
 
-
+@log("..\log\logs.txt")
 def transaction_descriptions(transactions: list) -> Generator:
     """
     Функция-генератор типа операций
@@ -119,4 +120,4 @@ def transaction_descriptions(transactions: list) -> Generator:
 
         yield transaction.get("description")
 
-account_operations = transaction_descriptions(transactions)
+account_operations = transaction_descriptions(transactions, '3')
