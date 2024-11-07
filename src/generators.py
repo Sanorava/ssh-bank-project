@@ -109,7 +109,7 @@ def card_number_generator(start: int, end: int) -> Generator:
 
 random_card_number = card_number_generator(1,  9999999999999999)
 
-@log("..\log\logs.txt")
+
 def transaction_descriptions(transactions: list) -> Generator:
     """
     Функция-генератор типа операций

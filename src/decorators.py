@@ -2,8 +2,15 @@ from functools import wraps
 
 
 def log(filename = None):
+    """
+    Создал декоратор, который вызывает функцию для декорации и записывает результат в файл,
+    если тот передан в аргумент декоратора, иначе же- выводит сообщение в консоль.
+
+    Если функция отработала корректно- выведет\запишет сообщение ' имя функции ок'
+    иначе выведет\запишет тип ошибки.
+
+    """
     def my_decorator(func):
-        print('DEBUG_1', 'я вызываюсь перед шагом, который вызывает мою функцию для логирования')
         @wraps(func)
         def wrapper(*args, **kwargs):
             try:
@@ -21,9 +28,3 @@ def log(filename = None):
                     print(f'{func.__name__} ERROR : {e.__class__.__name__}. Inputs: {args}, {kwargs}\n')
         return wrapper
     return my_decorator
-
-
-@log('..\log\logs.txt')
-def my_function(x, y):
-    return x + y
-print(my_function(1, '2'))
