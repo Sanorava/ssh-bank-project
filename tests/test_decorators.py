@@ -1,5 +1,8 @@
+from calendar import error
 from functools import wraps
-from src.masks import get_mask_account
+from re import match
+
+import pytest
 
 
 def log(filename = None):
@@ -29,3 +32,13 @@ def log(filename = None):
                     print(f'{func.__name__} ERROR : {e.__class__.__name__}. Inputs: {args}, {kwargs}\n')
         return wrapper
     return my_decorator
+
+
+@log()
+def example_func():
+    raise ValueError
+
+
+def test_log():
+    with pytest.raises(Exception, match = f'{example_func.__name__} ERROR : {e.__class__.__name__}. Inputs: \n'):
+        example_func()

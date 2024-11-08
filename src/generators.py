@@ -120,4 +120,4 @@ def transaction_descriptions(transactions: list) -> Generator:
 
         yield transaction.get("description")
 
-account_operations = transaction_descriptions(transactions, '3')
+account_operations = transaction_descriptions(transactions)
