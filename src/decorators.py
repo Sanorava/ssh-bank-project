@@ -1,5 +1,6 @@
 from functools import wraps
-from src.masks import get_mask_account
+
+from mypy.nodes import Decorator
 
 
 def log(filename = None):
@@ -11,7 +12,7 @@ def log(filename = None):
     иначе выведет\запишет тип ошибки.
 
     """
-    def my_decorator(func):
+    def my_decorator(func, *args, **kwargs):
         @wraps(func)
         def wrapper(*args, **kwargs):
             try:
