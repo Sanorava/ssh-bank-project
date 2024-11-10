@@ -1,4 +1,5 @@
 from typing import Generator
+from src.decorators import log
 
 
 def filter_by_currency(transactions: list , currency: str) -> Generator:
